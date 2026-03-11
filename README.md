@@ -16,53 +16,41 @@ Currently focused on **Web Development, UI/UX Design, and Backend Development us
 
 ---
 
-# 🚀 Technical Skills
-
-### 💻 Programming
-
-* Python
-* Java
-* C / C++
-
-### 🌐 Web Development
-
-* HTML
-* CSS
-* Bootstrap
-* Django
-
-### 🛠 Tools
-
-* Git & GitHub
-* Figma
-* VS Code
-* MySQL
-
-### 🎨 Design
-
-* UI/UX Design
-* Wireframing
-* Prototyping
-
----
-
 # 📂 Projects
 
 ## YUVA Membership
 The YUVA Website is a full-stack web application developed to support a student-led organization by digitizing membership management and internal coordination. The platform enables users to register, authenticate, and manage memberships, while administrators can oversee member data and organizational activities through a dedicated dashboard.The project focuses on clean UI design, secure authentication, role-based access control, and structured data management. It was built to solve real operational needs of a student organization and provided hands-on experience in designing, developing, and deploying a complete web solution.This project strengthened my understanding of full-stack development, system architecture, and building scalable applications aligned with real-world use cases.
 
----
 
-## 🎨 UI/UX Design Projects
+## 💻 Tech Stack
 
-Designed multiple UI systems using **Figma**, including:
+Frontend: React.js, HTML5, CSS3, JavaScript
 
-* Mobile Navigation Drawer for Travel App
-* SaaS Pricing Page UI
-* CMS Admin Dashboard
-* Subscription Confirmation Email Layout
+Styling: Custom CSS, responsive design
+
+Deployment: vercel , render
 
 ---
+
+
+## I’m skilled in:
+
+⚛️ React
+
+HTML
+
+CSS
+
+JavaScript
+
+Python
+
+Node.js
+
+Express
+
+MongoDB
+
 
 # 🎓 Education
 

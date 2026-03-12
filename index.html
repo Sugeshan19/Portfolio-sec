@@ -536,6 +536,89 @@
             }
         }
 
+        /* ── Theme Toggle Button ── */
+        .theme-toggle {
+            background: none;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            width: 38px;
+            height: 38px;
+            display: grid;
+            place-items: center;
+            cursor: pointer;
+            color: var(--text-muted);
+            font-size: 1rem;
+            transition: background-color 0.25s ease, border-color 0.25s ease,
+                        color 0.25s ease, transform 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .theme-toggle:hover,
+        .theme-toggle:focus-visible {
+            background: var(--surface-muted);
+            color: var(--accent);
+            border-color: var(--accent);
+            transform: rotate(20deg) scale(1.08);
+        }
+
+        .theme-toggle:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+
+        .theme-toggle .icon-sun  { display: none; }
+        .theme-toggle .icon-moon { display: block; }
+        [data-theme="dark"] .theme-toggle .icon-sun  { display: block; }
+        [data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+
+        /* ── Dark Theme Variables ── */
+        [data-theme="dark"] {
+            --bg: #0d1728;
+            --surface: #132337;
+            --surface-muted: #1a2e42;
+            --text: #dde8f2;
+            --text-muted: #8eaec8;
+            --accent: #51a8f1;
+            --accent-strong: #3d96e0;
+            --line: #1f3550;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+        }
+
+        [data-theme="dark"] body {
+            background: linear-gradient(180deg, #0b1520 0%, #0d1728 45%, #0f1c2e 100%);
+        }
+
+        [data-theme="dark"] .site-nav {
+            background: rgba(13, 23, 40, 0.92);
+            border-bottom-color: rgba(31, 53, 80, 0.9);
+        }
+
+        [data-theme="dark"] .brand              { color: #dde8f2; }
+        [data-theme="dark"] h1                  { color: #e8f1f8; }
+        [data-theme="dark"] .hero-summary        { color: #b0c8e0; }
+        [data-theme="dark"] .about-card p,
+        [data-theme="dark"] .education-card p    { color: #a8c2da; }
+        [data-theme="dark"] li                  { color: #a8c2da; }
+        [data-theme="dark"] .skills-card h3      { color: #b8d4ec; }
+        [data-theme="dark"] .tag                 { background: #1a3251; border-color: #2a4a6e; color: #93c0e4; }
+        [data-theme="dark"] .contact-chip        { background: #172b42; border-color: #1f3f5c; color: #93c0e4; }
+        [data-theme="dark"] .contact-chip:hover  { background: #1e3a54; border-color: #2a5278; }
+        [data-theme="dark"] .nav-links a:hover,
+        [data-theme="dark"] .nav-links a:focus-visible { background: #1a3251; }
+        [data-theme="dark"] .section-title        { color: #b8d0e8; }
+        [data-theme="dark"] .section-line         { background: linear-gradient(90deg, #2a4568 0%, #1f3550 100%); }
+        [data-theme="dark"] .section + .section   { border-top-color: #1f3050; }
+        [data-theme="dark"] .role                 { color: #c0d8f0; }
+        [data-theme="dark"] .project-card .project-title { color: #c0d8f0; }
+        [data-theme="dark"] .timeline::before      { background: #2a4a6e; }
+        [data-theme="dark"] .experience-card::before { box-shadow: 0 0 0 4px #132337; }
+        [data-theme="dark"] .contact-card          { color: #a8c2da; }
+        [data-theme="dark"] .contact-icon          { background: #1a3251; color: #6caee0; }
+        [data-theme="dark"] .contact-meta strong   { color: #b8d0e8; }
+        [data-theme="dark"] .btn-ghost             { background: #1a2e42; color: var(--text); border-color: var(--line); }
+        [data-theme="dark"] .btn-ghost:hover,
+        [data-theme="dark"] .btn-ghost:focus-visible { background: #1f3852; border-color: #2a4a6e; }
+
         @media print {
             @page {
                 size: A4;
@@ -759,6 +842,10 @@
                 <li><a href="#education">Education</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle theme">
+                <i class="fa-solid fa-moon icon-moon" aria-hidden="true"></i>
+                <i class="fa-solid fa-sun  icon-sun"  aria-hidden="true"></i>
+            </button>
         </div>
     </nav>
 
@@ -999,6 +1086,20 @@
     </footer>
 
     <script>
+        // ── Theme Toggle ──
+        (function () {
+            const saved = localStorage.getItem('theme') || 'dark';
+            document.documentElement.setAttribute('data-theme', saved);
+        })();
+
+        document.getElementById('theme-toggle').addEventListener('click', function () {
+            const current = document.documentElement.getAttribute('data-theme');
+            const next = current === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+            this.setAttribute('aria-label', next === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+        });
+
         const revealElements = document.querySelectorAll('.reveal');
         const revealObserver = new IntersectionObserver(
             (entries) => {

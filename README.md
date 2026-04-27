@@ -37,37 +37,60 @@ Deployment: vercel , render
 
 ⚛️ React
 
-HTML
+ # Ex01 Portfolio
+ ## Date:
 
-CSS
+ ## AIM
+ To create a Portfolio using HTML and CSS.
 
-JavaScript
+ ## ALGORITHM
+ ### STEP 1
+ Create an HTML file (index.html)
 
-Python
+ ### STEP 2
+ Create a CSS file (style.css)
 
-Node.js
+ ### STEP 3
+ Include a navigation bar with links to different sections.
 
-Express
+ ### STEP 4
+ Add structured sections for introduction, about, projects, and contact details.
 
-MongoDB
+ ### STEP 5
+ Define global styles for fonts, colors, and layout.
+
+ ### STEP 6
+ Style the header, navigation bar, and sections.
+
+ ### STEP 7
+ Use Flexbox or CSS Grid for layout design.
+
+ ### STEP 8
+ Add hover effects and transitions for interactivity.
+
+ ### STEP 9
+ Add Images and Media.
+
+ ### STEP 10
+ Use optimized images for a professional look.
+
+ ### STEP 11
+ Open the HTML file in a browser to check layout and functionality.
+
+ ### STEP 12
+ Fix styling issues and refine content placement.
+
+ ### STEP 13
+ Deploy the Portfolio.
+
+ ### STEP 14
+ Upload to GitHub Pages for free hosting.
+
+ ## PROGRAM
 
 
-# 🎓 Education
-
-**B.E – Computer Science Engineering**
-Saveetha Engineering College
-Chennai, Tamil Nadu, India
+ ## OUTPUT
 
 
-
-# 📫 Contact
-
-📧 Email: [sugeshansenthilv@gmail.com](mailto:sugeshansenthilv@gmail.com)
-
-💼 LinkedIn: https://linkedin.com/in/Sugeshan-s
-
-💻 GitHub: https://github.com/Sugeshan19
-
----
-
-⭐ If you found this repository useful, feel free to star it.
+ ## RESULT
+ The program for creating Portfolio using HTML and CSS is executed successfully.
